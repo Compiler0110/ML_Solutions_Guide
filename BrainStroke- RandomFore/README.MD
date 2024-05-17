@@ -28,3 +28,21 @@ Prevention includes decreasing risk factors, surgery to open up the arteries to 
 10) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
 
 11) stroke: 1 if the patient had a stroke or 0 if not
+
+
+### Machine Learning Workflow with RandomForestClassifier
+
+#### Data Loading and Preprocessing:
+- We start by loading the dataset from a CSV file using pandas (`pd.read_csv()`) and displaying the first few rows of the dataset to understand its structure.
+- We check for missing values in the dataset and handle categorical variables by one-hot encoding them using `pd.get_dummies()`.
+
+#### Model Training and Evaluation:
+- The dataset is split into training and testing sets using `train_test_split()` from sklearn.
+- We define the feature matrix `x` and the target variable `y`.
+- We instantiate a RandomForestClassifier model with `random_state=0` and train it on the training data using `model.fit()`.
+- Predictions are made on the test data (`x_test`) using `model.predict()` and the accuracy of the model's predictions is calculated using `accuracy_score()`.
+
+#### Evaluation:
+- Finally, we compute the accuracy score of the model (`accuracy`) on the test set.
+
+This code provides a clear example of a typical machine learning workflow, demonstrating data preprocessing, model training, and evaluation using the RandomForestClassifier algorithm.
